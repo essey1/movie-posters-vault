@@ -5,6 +5,8 @@ Here is a link to the app: https://movielaand.netlify.app
 
 ### How I Built It
 
+Step 0: Installed Node.js to react app using npm/npx.
+
 Step 1: Collected movies data using the OMDb API.
 
 Step 2: Created a JSX component for a movie poster.
