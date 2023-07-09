@@ -2,7 +2,7 @@
 
 A responsive react app called Movie Land in which you can search for movies.
 
-Here is a link to the app: https://movielaand.netlify.app
+Here is a link to the app: [https://movielaand.netlify.app](https://movielaand.netlify.app)
 
 ### How I Built It
 
