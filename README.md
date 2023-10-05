@@ -6,7 +6,7 @@ Here is a link to the app: [https://movielaand.netlify.app](https://movielaand.n
 
 ### How I Built It
 
-Step 0: Installed Node.js to create a react app using npm/npx.
+Step 0: Installed Node.js.
 
 Step 1: Collected movies data using the OMDb API.
 
