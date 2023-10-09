@@ -32,6 +32,11 @@ const API_URL = 'https://www.omdbapi.com?apikey=85ca9730';
         <input
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyUp={(e) => {
+            if (e.key === 'Enter') {
+              searchMovies(searchTerm);
+            }
+          }}
           placeholder="Search for movies and shows"
         />
 
