@@ -1,8 +1,8 @@
-# Movie Search Engine
+# Movie Posters Search Engine
 
-A responsive react app called Movie Land in which you can search for movies.
+A responsive react app called Movie Posters Vault where you can search for movies.
 
-Here is a link to the app: [https://movielaand.netlify.app](https://movielaand.netlify.app)
+Here is a link to the app: [https://movie-posters-vault.netlify.app/](https://movie-posters-vault.netlify.app/)
 
 ### How I Built It
 
