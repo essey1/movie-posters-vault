@@ -14,7 +14,7 @@ const API_URL = 'https://www.omdbapi.com?apikey=85ca9730';
 
 
   useEffect(() => {
-    searchMovies('Avengers');
+    searchMovies("The Godfather");
   }, []);
 
   const searchMovies = async (title) => {
@@ -26,13 +26,13 @@ const API_URL = 'https://www.omdbapi.com?apikey=85ca9730';
 
   return (
     <div className='app'>
-      <h1>Movie Land</h1>
+      <h1>Movie Posters Vault</h1>
 
       <div className='search'>
         <input
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search for Movies"
+          placeholder="Search for movies and shows"
         />
 
         <img
