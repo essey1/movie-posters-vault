@@ -11,6 +11,7 @@ const API_URL = 'https://www.omdbapi.com?apikey=85ca9730';
   const App = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [movies, setMovies] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
 
   useEffect(() => {
@@ -18,10 +19,13 @@ const API_URL = 'https://www.omdbapi.com?apikey=85ca9730';
   }, []);
 
   const searchMovies = async (title) => {
+    setIsLoading(true);
+
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
 
     setMovies(data.Search);
+    setIsLoading(false);
   };
 
   return (
@@ -48,6 +52,12 @@ const API_URL = 'https://www.omdbapi.com?apikey=85ca9730';
       </div>
 
       {
+        isLoading ? (
+          <>
+            <br /><br />
+            <img src="img/loading.svg" alt="Loading" />
+          </>
+        ) :
         movies?.length > 0
           ? (
             <div className='container'>
@@ -60,7 +70,7 @@ const API_URL = 'https://www.omdbapi.com?apikey=85ca9730';
               <h2>No Movies Found</h2>
             </div>
           )
-        }
+      }
 
       
     </div>
