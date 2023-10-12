@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
-
 import MovieCard from "./MovieCard";
-import SearchIcon from "./search.svg";
-import "./App.css";
+import "./style.css";
  
 const API_URL = 'https://www.omdbapi.com?apikey=85ca9730';
 
 
 
-  const App = () => {
-    const [searchTerm, setSearchTerm] = useState("");
-    const [movies, setMovies] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+const App = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
 
   useEffect(() => {
@@ -45,7 +43,7 @@ const API_URL = 'https://www.omdbapi.com?apikey=85ca9730';
         />
 
         <img
-           src={SearchIcon}
+           src="img/search.svg"
            alt='search'
            onClick={() => searchMovies(searchTerm)}
         />

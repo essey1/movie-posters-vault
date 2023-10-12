@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
 
 *,
 *::before,
@@ -10,17 +10,17 @@
 }
 
 :root {
-  --font-roboto: "Roboto Slab", serif;
-  --font-raleway: "Raleway", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-merriweather: "Merriweather", serif;
 }
 
 body {
-  font-family: var(--font-roboto);
-  background-color: #212426;
+  font-family: var(--font-merriweather);
+  background-color: #1b0000;
 }
 
 .app {
-  padding: 4rem;
+  padding: 4em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,44 +29,42 @@ body {
 
 h1 {
   font-size: 3rem;
-  letter-spacing: 0.9px;
+  text-align: center;
+  letter-spacing: 1px;
   background: linear-gradient(
     90deg,
-    rgba(249, 211, 180, 1) 0%,
-    rgba(249, 211, 180, 0) 100%
+    rgb(255, 239, 150) 0%,
+    rgba(255, 239, 150, 0.492) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: fit-content;
 }
 
 .search {
-  width: 71%;
-  margin: 4rem 0 2rem;
+  width: 70%;
+  margin: 4em 0 2em;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 1.5rem 1.75rem;
-  border-radius: 3rem;
-  background: #1f2123;
-  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  padding: 1.25em 1.75em;
+  border-radius: 2.5em;
+  background: #222000;
 }
 
 .search input {
   flex: 1;
   border: none;
-  font-size: 1.5rem;
-  font-family: var(--font-raleway);
-  font-weight: 500;
-  padding-right: 1rem;
+  font-size: 1.4rem;
+  font-family: var(--font-roboto);
+  letter-spacing: .5px;
+  padding-right: 1em;
 
   outline: none;
-  color: #a1a1a1;
-  background: #1f2123;
+  color: #afa878;
+  background: #222000;
 }
 
 .search img {
@@ -74,21 +72,6 @@ h1 {
   height: 35px;
   cursor: pointer;
 }
-
-/* .search button {
-  padding: 20px 40px;
-  border-radius: 0.5rem;
-  margin-left: 15px;
-  color: #a1a1a1;
-  font-family: var(--font-raleway);
-  font-weight: 900;
-  letter-spacing: 0.75px;
-  font-size: 1.25rem;
-  cursor: pointer;
-  background: #1f2123;
-  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-} */
 
 .empty {
   width: 100%;
@@ -116,17 +99,18 @@ h1 {
 }
 
 .movie {
-  width: 310px;
-  height: 460px;
-  margin: 1.5rem;
+  width: 320px;
+  height: 450px;
+  margin: 1em;
 
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   border: none;
 
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  transition: all 750ms cubic-bezier(0.175, 0.885, 0, 1);
+  box-shadow: .25em .25em .75em rgba(0,0,0,.25),
+  .125em .125em .25em rgba(0,0,0,.15);
 }
 
 .movie div:nth-of-type(1) {
@@ -139,7 +123,8 @@ h1 {
 }
 
 .movie:hover {
-  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  box-shadow: .5em .5em 1em rgba(0,0,0,.25),
+  .25em .25em .5em rgba(0,0,0,.15);
   transform: scale(1.05, 1.05);
 }
 
@@ -165,17 +150,17 @@ h1 {
 }
 
 .movie div:nth-of-type(3) span {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-roboto);
   text-transform: uppercase;
   font-size: 13px;
-  letter-spacing: 2px;
+  letter-spacing: .5px;
   font-weight: 500;
   color: #f0f0f0;
 }
 
 .movie div:nth-of-type(3) h3 {
   margin-top: 5px;
-  font-family: "Roboto Slab", serif;
+  font-family: var(--font-merriweather);
   color: #f9d3b4;
 }
 
@@ -192,18 +177,22 @@ h1 {
   opacity: 1;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .app {
     padding: 4rem 2rem;
   }
 
+  h1 {
+    font-size: 2.25rem;
+  }
+
   .search {
-    padding: 1rem 1.75rem;
+    padding: 1em 1.5em;
     width: 100%;
   }
 
   .search input {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .search img {
@@ -218,7 +207,15 @@ h1 {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .search {
+    padding-block: .75em;
+  }
+
+  .search input {
+    font-size: 1rem;
   }
 
   .container {
