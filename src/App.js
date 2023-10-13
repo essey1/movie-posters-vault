@@ -39,7 +39,7 @@ const App = () => {
               searchMovies(searchTerm);
             }
           }}
-          placeholder="Search for movies and shows"
+          placeholder="Find your favorite movies and shows"
         />
 
         <img

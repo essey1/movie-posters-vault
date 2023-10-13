@@ -31,40 +31,34 @@ h1 {
   font-size: 3rem;
   text-align: center;
   letter-spacing: 1px;
-  background: linear-gradient(
-    90deg,
-    rgb(255, 239, 150) 0%,
-    rgba(255, 239, 150, 0.492) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #e7d888;
 }
 
 .search {
   width: 70%;
+  max-width: 550px;
   margin: 4em 0 2em;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 1.25em 1.75em;
+  padding: 1em 1.75em;
   border-radius: 2.5em;
-  background: #222000;
+  background: #302424;
 }
 
 .search input {
   flex: 1;
   border: none;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-family: var(--font-roboto);
   letter-spacing: .5px;
   padding-right: 1em;
 
   outline: none;
-  color: #afa878;
-  background: #222000;
+  color: #d3d0c3;
+  background: #302424;
 }
 
 .search img {
@@ -84,7 +78,7 @@ h1 {
 
 .empty h2 {
   font-size: 1.25rem;
-  color: #f9d3b4;
+  color: #fcecba;
   font-family: var(--font-raleway);
 }
 
@@ -108,18 +102,18 @@ h1 {
   overflow: hidden;
   border: none;
 
-  transition: all 750ms cubic-bezier(0.175, 0.885, 0, 1);
+  transition: all 750ms ease;
   box-shadow: .25em .25em .75em rgba(0,0,0,.25),
   .125em .125em .25em rgba(0,0,0,.15);
 }
 
-.movie div:nth-of-type(1) {
+.movie__year {
   position: absolute;
   padding: 16px;
   width: 100%;
-  opacity: 0;
   top: 0;
-  color: #f9d3b4;
+  color: #fcecba;
+  opacity: 0;
 }
 
 .movie:hover {
@@ -128,19 +122,20 @@ h1 {
   transform: scale(1.05, 1.05);
 }
 
-.movie div:nth-of-type(2) {
+.movie__poster {
   width: 100%;
   height: 100%;
 }
 
-.movie div:nth-of-type(2) img {
+.movie__poster img {
   height: 100%;
   width: 100%;
 }
 
-.movie div:nth-of-type(3) {
+.movie__title {
   z-index: 2;
-  background-color: #343739;
+  background-color: #341d1d;
+  opacity: 0;
   padding: 16px 24px 24px 24px;
 
   position: absolute;
@@ -149,7 +144,7 @@ h1 {
   left: 0;
 }
 
-.movie div:nth-of-type(3) span {
+.movie__title span {
   font-family: var(--font-roboto);
   text-transform: uppercase;
   font-size: 13px;
@@ -158,22 +153,22 @@ h1 {
   color: #f0f0f0;
 }
 
-.movie div:nth-of-type(3) h3 {
+.movie__title h3 {
   margin-top: 5px;
   font-family: var(--font-merriweather);
   color: #f9d3b4;
 }
 
-.movie:hover div:nth-of-type(2) {
+.movie:hover .movie__poster {
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
-.movie:hover div:nth-of-type(3) {
-  background-color: transparent;
+.movie:hover .movie__title {
+  opacity: 1;
 }
 
-.movie:hover div:nth-of-type(1) {
+.movie:hover .movie__year {
   opacity: 1;
 }
 
@@ -189,10 +184,11 @@ h1 {
   .search {
     padding: 1em 1.5em;
     width: 100%;
+    max-width: 400px;
   }
 
   .search input {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   .search img {
