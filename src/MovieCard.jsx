@@ -8,7 +8,7 @@ const MovieCard = ({ movie }) => {
         </div>
 
         <div className="movie__poster">
-            <img src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/400'} alt={movie.Title}/>
+            <img src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/320x450'} alt={movie.Title}/>
         </div>
                 
         <div className="movie__title">
