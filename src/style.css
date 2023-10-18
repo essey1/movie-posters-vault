@@ -212,7 +212,7 @@ h1 {
   }
 
   .search {
-    padding-block: .75em;
+    padding: .75em 1.25em;
   }
 
   .search input {
