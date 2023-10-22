@@ -8,7 +8,7 @@ Here is a link to the app: [https://movie-posters-vault.netlify.app/](https://mo
 
 ### How I Built It
 
-Step 0: Installed Node.js.
+- Step 0: Installed Node.js.
 
 - Step 1: Collected movies data using the OMDb API.
 
