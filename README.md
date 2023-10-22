@@ -1,6 +1,6 @@
-# Movie Posters Search Engine
+# Movie Posters Vault
 
-A responsive react app called Movie Posters Vault where you can search for movies.
+A responsive movie posters search engine that allows users to search for and explore movie posters.
 
 Here is a link to the app: [https://movie-posters-vault.netlify.app/](https://movie-posters-vault.netlify.app/)
 
